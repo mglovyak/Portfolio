@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Портфолио</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">ГЛАВНОЕ</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#about">ОБО МНЕ</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">МОЙ ОПЫТ</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Секция превью -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">ГЛОВЯК МАКСИМ</h1>
+        <p class="home__subtitle">WEB-DEVELOPER, PYTHON PROGRAMMER,SQL</p>
+      </section>
+      <!-- Секция с рассказом о себе -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">ОБО МНЕ</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            Меня зовут Максим,я занимаюсь программированием на таких языках как HTML,CSS,PYTHON и SQL,я также создавал discord ботов.
+            Я умею работать в коллективе.Я также немного разбираюсь в робототехнике , а также я создавал вполне простенькие игры на PYGAME,занимаюсь также решением различных задач на PYTHON.А также создавал свои индивидуальные проекты.
+
+          </p>
+          <img
+            class="info-block__img"
+            src="../static/img/profile.png"
+            alt="me"
+            width="250"
+            height="250"
+          />
+        </div>
+      </section>
+      <!-- Секция со скиллами -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">МОЙ ОПЫТ </h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/python.svg"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">PYTHON</span>
+              <input class="skill__button" type="submit" name="button_python" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/discord.svg"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Discord</span>
+              <input class="skill__button" type="submit" name="button_discord" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/html.svg"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">HTML</span>
+              <input class="skill__button" type="submit" name="button_html" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/sql.svg"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">SQL</span>
+              <input class="skill__button" type="submit" name="button_db" value="SHOW PROJECT">
+            </li>
+          </ul>
+        </form>
+        {% if button_python%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/python_color.svg" alt="project" width="500">
+              <a class="project__link" href="https://github.com/mglovyak/password_generator.git">Открыть на GitHub.1-ый проект</a>
+              <a class="project__link" href="https://github.com/mglovyak/flask.git">Открыть на GitHub.2-ой проект</a>
+              <a class="project__link" href="https://github.com/mglovyak/meme_dict.git">Открыть на GitHub.3-ий проект</a>
+          </div>
+        {% endif %}
+        {% if button_discord%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/discord_color.svg" alt="project" width="500">
+              <a class="project__link" href="https://github.com/mglovyak/bot_discord.git">Открыть на GitHub.1-ый проект</a>
+              <a class="project__link" href="https://github.com/mglovyak/ecology.git">Открыть на GitHub.2-ой проект</a>
+          </div>
+        {% endif %}
+        {% if button_html%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/html_color.svg" alt="project" width="500">
+              <a class="project__link" href="https://github.com/mglovyak/Html.git">Открыть на GitHub.1-ый проект</a>
+              <a class="project__link" href="https://github.com/mglovyak/-.git">Открыть на GitHub.2-ой проект</a>
+              <a class="project__link" href="https://github.com/mglovyak/anime.git">Открыть на GitHub.3-ий проект</a>
+          </div>
+        {% endif %}
+        {% if button_db%}
+        <div class="skills__project project" id="project">
+            <img class="project__img" src="../static/img/sql_color.svg" alt="project" width="500">
+            <a class="project__link" href="https://github.com/mglovyak/main-diary.git">Открыть на GitHub</a>
+        </div>
+      {% endif %}
+        
+      </section>
+      <!-- Секция с формой обратной связи -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">FEEDBACK</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="Введите E-mail" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Комментарий"></textarea>
+          </label>
+          <button class="form__button" type="submit">ОТПРАВИТЬ</button>
+        </form>
+      </section>
+    </main>
+    <p>Если есть какие то вопросы ко мне или ,что то вы хотите со мной обсудить по моим проектам.Или вы просто хотите со мной пообщаться.То на эти случаи я оставил вам ссылку на мой аккаунт в ВК.</p>
+    <label>
+      <a class="project__link" href="https://vk.com/fucking0samurai">Ссылочка на мой аккаунт</a>
+    </label>
+    <!-- Подвал для ссылок на соц-сети -->
+    <footer>
+      
+      
+    </footer>
+  </body>
+</html>
